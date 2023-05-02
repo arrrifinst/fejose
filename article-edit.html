@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>Dashboard</title>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar position-fixed top-0 bottom-0 bg-white border-end">
+
+        <div class="d-flex align-items-center p-3">
+            <a href="#" class="sidebar-logo">
+                <img src="images/logo.png" alt="">
+            </a>
+        </div>
+
+        <ul class="sidebar-menu p-3 m-0 mb-0">
+            <li class="sidebar-menu-item active">
+                <a href="index.html">
+                    <i class="ri-dashboard-line sidebar-menu-item-icon"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li class="sidebar-menu-divider mt-4 mb-1 text-uppercase">Appointments</li>
+
+            <li class="sidebar-menu-item">
+                <a href="consultation.html">
+                    <i class="ri-message-3-line sidebar-menu-item-icon"></i>
+                    Konsultasi
+                </a>
+            </li>
+
+            <li class="sidebar-menu-item">
+                <a href="reservation.html">
+                    <i class="ri-calendar-line sidebar-menu-item-icon"></i>
+                    Reservasi
+                </a>
+            </li>
+
+            <li class="sidebar-menu-divider mt-4 mb-1 text-uppercase">General</li>
+
+            <li class="sidebar-menu-item">
+                <a href="doctor.html">
+                    <i class="ri-nurse-line sidebar-menu-item-icon"></i>
+                    Dokter
+                </a>
+            </li>
+
+            <li class="sidebar-menu-item">
+                <a href="patient.html">
+                    <i class="ri-dossier-line sidebar-menu-item-icon"></i>
+                    Pasien
+                </a>
+            </li>
+
+            <li class="sidebar-menu-divider mt-4 mb-1 text-uppercase">Update</li>
+
+            <li class="sidebar-menu-item">
+                <a href="article.html">
+                    <i class="ri-article-line sidebar-menu-item-icon"></i>
+                    Artikel
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- end Sidebar -->
+
+    <!-- Main -->
+    <main class="bg-light">
+        <div class="p-2">
+            <!-- Navbar -->
+            <nav class="px-3 py-2 bg-white rounded shadow-sm">
+                <i class="ri-menu-line sidebar-toggle me-3 d-block d-md-none"></i>
+                <h5 class="mb-0 me-auto">Halo Admin</h5>
+
+                <div class="dropdown me-3 d-none d-sm-block">
+                    <div class="cursor-pointer dropdown-toggle navbar-link" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="ri-notification-line"></i>
+                    </div>
+                    <div class="dropdown-menu fx-dropdown-menu">
+                        <h5 class="p-3 bg-orange text-light">Notifikasi</h5>
+                        <div class="list-group list-group-flush">
+                            <a href="#"
+                                class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
+                                <div class="me-auto">
+                                    <div class="fw-semibold">Subheading</div>
+                                    <span class="fs-7">Content for list item</span>
+                                </div>
+                                <span class="badge bg-primary rounded-pill">1</span>
+                            </a>
+                            <a href="#"
+                                class="list-group-item list-group-item-action d-flex justify-content-between align-items-start">
+                                <div class="me-auto">
+                                    <div class="fw-semibold">Subheading</div>
+                                    <span class="fs-7">Content for list item</span>
+                                </div>
+                                <span class="badge bg-primary rounded-pill">1</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <div class="d-flex align-items-center cursor-pointer dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="me-2 d-none d-sm-block">Admin</span>
+                        <img class="navbar-profile-image" src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Image">
+                    </div>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Profil</a></li>
+                        <li><a class="dropdown-item" href="#">Keluar</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- end Navbar -->
+
+            <!-- Content -->
+            <div class="py-4">
+                <!-- Form -->
+                <div class="card border-0 shadow py-3">
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="title" class="form-label">Judul Artikel</label>
+                                <input type="text" class="form-control" id="title" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="title" class="form-label">Kategori</label>
+                                <select class="form-select" aria-label="Default select example" required>
+                                    <option selected>Pilih kategori</option>
+                                    <option value="Kucing">Kucing</option>
+                                    <option value="Anjing">Anjing</option>
+                                    <option value="Kelinci">Kelinci</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="title" class="form-label">Gambar</label>
+                                <input type="file" class="form-control" id="title" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="description" class="form-label">Deskripsi</label>
+                                <textarea class="form-control" name="" id="" cols="30" rows="10" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Simpan</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- end Form -->
+            </div>
+            <!-- end Content -->
+        </div>
+    </main>
+    <!-- end Main -->
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js" integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    
+</body>
+
+</html>
