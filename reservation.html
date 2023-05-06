@@ -148,8 +148,14 @@
                                     <div class="form-group">
                                         <input type="datetime-local" class="form-control-input" placeholder="Pilih tanggal" required>
                                     </div>
+                                    <div class="form-group">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                            <label class="form-check-label" for="inlineCheckbox1">Layanan penjemputan hewan</label>
+                                        </div>
+                                    </div>
                                     <div class="form-group mt-5">
-                                        <button type="submit" class="form-control-submit-button">Reservasi sekarang</button>
+                                        <button type="submit" class="form-control-submit-button" data-bs-target="#detailmModal" data-bs-toggle="modal">Reservasi sekarang</button>
                                     </div>
                                 </form>
                             </div>
@@ -160,6 +166,44 @@
             </div> 
         </div> 
         <!-- end of form -->
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="detailmModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Rincian reservasi</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Nama Hewan : -</p>
+                        <p>Tanggal : -</p>
+                        <p>Layanan : -</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn-solid-sm" data-bs-dismiss="modal" aria-label="Close">Batal</button>
+                        <button class="btn-solid-sm" data-bs-target="#successModal" data-bs-toggle="modal">Konfirmasi</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="successModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-body">
+                    <div class="popup">
+                        <img src="http://goactionstations.co.uk/wp-content/uploads/2017/03/Green-Round-Tick.png" alt="">
+                        <h1>Reservasi Berhasil!</h1>
+                        <h3 class="code">Kode Anda: 12345</h3>
+                     </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!-- end of modal -->
+
 
         <!-- Footer -->
         <div class="footer bg-gray">

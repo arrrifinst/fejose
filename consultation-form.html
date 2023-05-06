@@ -83,11 +83,22 @@
         <!-- Form -->
         <div class="form" id="form">
             <div class="container">
+
+                <div class="row mb-3">
+                    <div class="col-lg-10 offset-lg-1">
+                        <a href="consultation-detail.html" class="back">
+                            <i class="fas fa-backward"></i>
+                            <span>Kembali</span>
+                        </a>
+                    </div>
+                </div>
+                
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
-                        
-                        <div class="card border-0 shadow py-5 px-5">
+                        <div class="card border-0 shadow py-3 px-3">
                             <div class="card-body">
+                                <h5>Lengkapi Data</h5>
+                                <hr>
                                 <form>
                                     <div class="form-group">
                                         <select class="form-control-select" required>
@@ -99,20 +110,16 @@
                                     <div class="form-group">
                                         <textarea class="form-control-textarea" placeholder="Keluhan" required></textarea>
                                     </div>
-                                    <label for="bank">Pilih metode pembayaran :</label>
-                                    <div class="form-check mt-2">
-                                        <input class="form-check-input" type="radio" name="bank" id="bank">
-                                        <label class="form-check-label" for="bank">
-                                          Transfer Bank
-                                        </label>
-                                      </div>
-                                    <div class="form-group mt-5">
-                                        <button type="submit" class="form-control-submit-button" data-bs-toggle="modal" data-bs-target="#payment">Lanjutkan Pembayaran</button>
+                                    <label for="bank">Upload bukti pembayaran:</label>
+                                    <div class="form-group mt-3">
+                                        <input type="file" class="form-control-input" required>
+                                    </div>
+                                    <div class="form-group mt-2">
+                                        <button type="submit" class="form-control-submit-button" data-bs-toggle="modal" data-bs-target="#confirmModal">Kirim</button>
                                     </div>
                                 </form>
                             </div>
                         </div>
-
                     </div> 
                 </div> 
             </div> 
@@ -120,45 +127,42 @@
         <!-- end of form -->
 
 
-        <!-- Modals -->
-        <div class="details-modal">
-            <div id="payment" class="modal fade" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog modal-sm">
-                    <div class="modal-content">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        <div class="text-container">
-                            <h3>Konfirmasi Pembayaran</h3>
-                            <hr>
-                            <div class="row">
-                                <div class="col-lg-8">
-                                    <p>Anda yakin inginmelakukan pembayaran?</p>
-                                    <ul class="list-unstyled li-space-lg">
-                                        <li class="d-flex">
-                                            <i class="fas fa-square"></i>
-                                            <div class="flex-grow-1">Layanan : Konsultasi</div>
-                                        </li>
-                                        <li class="d-flex">
-                                            <i class="fas fa-square"></i>
-                                            <div class="flex-grow-1">Dokter : drh. Kama</div>
-                                        </li>
-                                        <li class="d-flex">
-                                            <i class="fas fa-square"></i>
-                                            <div class="flex-grow-1">Durasi : 20 menit</div>
-                                        </li>
-                                    </ul>
-                                    <div class="quote">
-                                        <div class="flex-grow-1">Transfer ke : <strong>0988xxxxx</strong></div>
-                                        <div class="flex-grow-1 mt-2">Total bayar : Rp 20.000</div>
-                                    </div>
-                                </div>
-                            </div>                            
-                            <button type="button" class="btn-solid-sm" data-bs-dismiss="modal">Batal</button>
-                        </div> 
-                    </div> 
-                </div> 
-            </div> 
+        <!-- Modal -->
+        <div class="modal fade" id="confirmModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Konfirmasi</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  Anda yakin ingin melanjutkan?
+                </div>
+                <div class="modal-footer">
+                  <button class="btn-solid-sm" data-bs-dismiss="modal" aria-label="Close">Batal</button>
+                  <button class="btn-solid-sm" data-bs-target="#successModal" data-bs-toggle="modal">Ya</button>
+                </div>
+              </div>
+            </div>
         </div>
-        <!-- end of Modals -->
+
+        <div class="modal fade" id="successModal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-body">
+                    <div class="popup">
+                        <img src="http://goactionstations.co.uk/wp-content/uploads/2017/03/Green-Round-Tick.png" alt="">
+                        <h1>Pendaftaran Berhasil!</h1>
+                        <h3 class="code">Kode Anda: 12345</h3>
+                     </div>
+                </div>
+              </div>
+            </div>
+        </div>
+        <!-- end of modal -->
+
+
+
 
 
         <!-- Footer -->
